@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:7.0.7'
+
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}

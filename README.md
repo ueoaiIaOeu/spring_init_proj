@@ -30,3 +30,21 @@ AbstractContextLoaderInitializer here we bound rootContext with ContextLoaderLis
 then bound ContextLoaderListener with servletContext
 
 WebApplicationInitializer its just interface. void onStartup(ServletContext servletContext)
+
+---
+
+Now leta try to understand how does hibernate work (after that, we will inspect sprign jpa)
+
+
+Application
+↓
+Spring Data JPA
+↓
+JPA API
+↓
+Hibernate (JPA provider)
+↓
+Database
+JPA defines interfaces (EntityManager, EntityManagerFactory, etc.).
+Hibernate implements those interfaces.
+Spring Data JPA sits on top and generates repository implementations for you.

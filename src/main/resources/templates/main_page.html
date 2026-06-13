@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <style>
+        table { border-collapse: collapse; }
+        td {
+            padding: 5px 15px;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+        td:first-child { border-left: none; }
+        td:last-child { border-right: none; }
+        .action-container { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="entity : ${matrix}">
+            <td th:text="${entity.email}">email</td>
+            <td th:text="${entity.password}">password</td>
+            <td th:text="${entity.phoneNumber}">phone</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</body>
+</html>

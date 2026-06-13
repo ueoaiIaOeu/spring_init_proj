@@ -19,9 +19,8 @@ public class MyController {
 
     @GetMapping("/")
     public String getMainPage(Model model) {
-        model.addAttribute("matrix", fieldService.getTabularRows());
-        model.addAttribute("titles", fieldService.getAllTitles());
 
+        model.addAttribute("matrix", fieldService.getAll());
         return "main_page";
     }
 
